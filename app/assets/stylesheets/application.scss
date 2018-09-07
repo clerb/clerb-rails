@@ -1,0 +1,15 @@
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
+
+@import '~startbootstrap-freelancer/scss/freelancer';
+@import '~bootstrap/scss/bootstrap';
+
+@import './github-fork-ribbon';
+
+.home-description-link {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
