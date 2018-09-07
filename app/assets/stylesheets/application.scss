@@ -8,8 +8,5 @@ $fa-font-path: "~font-awesome/fonts";
 
 .home-description-link {
   color: white;
-
-  &:hover {
-    color: white;
-  }
+  text-decoration: underline;
 }
