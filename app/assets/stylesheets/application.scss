@@ -49,22 +49,38 @@ $fa-font-path: "~font-awesome/fonts";
     text-transform: uppercase;
     font-weight: 600;
   }
-
-  .address {
-    color: $secondary;
-    font-weight: 600;
-
-    .maps-link {
-      color: $secondary;
-    }
-  }
 }
 
 .hr-secondary {
   border: solid $secondary 1px;
 }
 
-#events {
+.address {
+  color: $secondary;
+  font-weight: 600;
+
+  .maps-link {
+    color: $secondary;
+  }
+}
+
+#events, #event {
   padding-top: calc(6rem + 106px);
   padding-bottom: 2rem;
+}
+
+#event {
+  .map-frame {
+    height: 350px;
+  }
+
+  .row {
+    @media only screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+
+      .col-lg-5 {
+        margin-top: 15px;
+      }
+    }
+  }  
 }

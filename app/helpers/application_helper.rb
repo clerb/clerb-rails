@@ -16,6 +16,10 @@ module ApplicationHelper
     "https://maps.google.com/?q=#{address}"
   end
 
+  def google_maps_embed_link(address)
+    "https://www.google.com/maps/embed/v1/place?q=#{address}&key=#{ENV['GOOGLE_MAPS_API_KEY']}"
+  end
+
   def venue_address(event)
     "#{event.venue.name}, #{event.venue.address}, #{event.venue.city}, #{event.venue.state}"
   end

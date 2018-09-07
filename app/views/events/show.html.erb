@@ -1,0 +1,45 @@
+<!-- Events Section -->
+<section id="event">
+  <div class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0"><%= @event.name %></h2>
+    <hr class="star-dark mb-5">
+
+    <div class="row">
+      <div class="col-lg-5 d-flex flex-column">
+        <p class="address">
+          <i class="fa fa-map-pin mr-2"></i>
+          <%= venue_address(@event) %>
+        </p>
+
+        <iframe
+          class="map-frame"
+          frameborder="0"
+          src="<%= google_maps_embed_link(venue_address(@event)) %>"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="col-lg-7">
+        <p class="lead">
+          <span class="pull-right">
+            <strong><%= @event.num_attendees %></strong>
+            <%= @event.start_time.past? ? "attended" : "attending" %>
+          </span>
+
+          <%= event_display_date(@event) %>, <%= event_display_time(@event) %><br />
+        </p>
+
+        <p>
+          <%= raw @event.description %>
+        </p>
+
+        <% unless @event.start_time.past? %>
+          <%= link_to @event.meetup_link, target: "_blank", class: "btn btn-primary" do %>
+            <i class="fa fa-reply mr-2"></i>
+            RSVP on Meetup
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
