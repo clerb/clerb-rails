@@ -14,18 +14,36 @@ jobs:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
+          # Fall back to using the latest cache if no exact match is found.
           - v1-dependencies-
+          - v1-yarn-cache-{{ checksum "yarn.lock" }}
+          - v1-yarn-cache-
+          - v1-npm-dependencies-{{ checksum "yarn.lock" }}
+          - v1-npm-dependencies-
 
       - run:
-          name: install dependencies
+          name: Install dependencies
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - run:
+          name: Install npm dependencies
+          command: yarn install
 
       - save_cache:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      - save_cache:
+          key: v1-yarn-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - save_cache:
+          key: v1-npm-dependencies-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
         
       # Database setup.
       - run: bundle exec rake db:create db:schema:load
