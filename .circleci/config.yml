@@ -58,7 +58,10 @@ jobs:
           key: v1-npm-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-        
+
+      # Run rubocop.
+      - run: bundle exec rubocop
+
       # Database setup.
       - run: bundle exec rake db:create db:schema:load
 
