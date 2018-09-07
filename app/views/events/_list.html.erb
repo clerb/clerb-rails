@@ -1,0 +1,38 @@
+<% events.each do |event| %>
+  <div class="row">
+    <div class="col-lg-10 ml-auto mr-auto event-row">
+      <div class="row details-row">
+        <div class="col-lg-3 d-flex flex-column justify-content-center">
+          <% unless event.start_time.past? %>
+            <%= link_to event.meetup_link, target: "_blank", class: "btn btn-primary" do %>
+              <i class="fa fa-reply mr-2"></i>
+              RSVP on Meetup
+            <% end %>
+          <% end %>
+
+          <p class="lead">
+            <%= event_display_date(event) %><br />
+            <%= event_display_time(event) %><br />
+            <strong><%= event.num_attendees %></strong>
+            <%= event.start_time.past? ? "attended" : "attending" %>
+          </p>
+        </div>
+
+        <div class="col-lg-9 d-flex flex-column justify-content-center">
+          <p class="lead">
+            <%= link_to event.name, event_path(event), class: "event-title" %>
+          </p>
+
+          <p class="address">
+            <i class="fa fa-map-pin mr-2"></i>
+            <%= link_to venue_address(event), google_maps_link(venue_address(event)), target: "_blank", class: "maps-link" %>
+          </p>
+
+          <p class="lead">
+            <%= truncate(strip_tags(event.description), length: 300) %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

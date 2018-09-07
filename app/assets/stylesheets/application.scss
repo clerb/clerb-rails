@@ -10,3 +10,77 @@ $fa-font-path: "~font-awesome/fonts";
   color: white;
   text-decoration: underline;
 }
+
+.event-row {
+  border-bottom: solid $secondary 3px;
+  padding: 25px;
+
+  .details-row {
+    @media only screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .col-lg-3, .col-lg-9 {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .lead:first-child {
+      margin-top: 1rem;
+    }
+  }
+
+  .col-lg-3 {
+    text-align: center;
+    border-right: solid $secondary 3px;
+
+    @media only screen and (max-width: 992px) {
+      border-right: none;
+    }
+
+    .lead {
+      margin-top: 25px;
+      margin-bottom: 0px;
+    }
+  }
+
+  a.event-title {
+    color: $secondary;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.hr-secondary {
+  border: solid $secondary 1px;
+}
+
+.address {
+  color: $secondary;
+  font-weight: 600;
+
+  .maps-link {
+    color: $secondary;
+  }
+}
+
+#events, #event {
+  padding-top: calc(6rem + 106px);
+  padding-bottom: 2rem;
+}
+
+#event {
+  .map-frame {
+    height: 350px;
+  }
+
+  .row {
+    @media only screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+
+      .col-lg-5 {
+        margin-top: 15px;
+      }
+    }
+  }  
+}

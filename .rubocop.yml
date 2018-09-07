@@ -5,7 +5,16 @@ AllCops:
     - tmp/**/*
     - vendor/**/*
 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
 Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
   Enabled: false
 
 Style/Documentation:

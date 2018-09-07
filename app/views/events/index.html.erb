@@ -1,0 +1,15 @@
+<!-- Events Section -->
+<section id="events">
+  <div class="container">
+    <h2 class="text-center text-uppercase text-secondary mb-0">Events</h2>
+    <hr class="star-dark mb-5">
+    
+    <%= render partial: 'events/list', locals: { events: @events } %>
+
+    <div class="row">
+      <div class="col-lg-10 ml-auto mr-auto mt-5 d-flex justify-content-center">
+        <%= will_paginate @events, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+      </div>
+    </div>
+  </div>
+</section>
