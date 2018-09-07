@@ -11,6 +11,7 @@
 /log/*
 /tmp/*
 /coverage
+/spec/examples.txt
 
 # Ignore uploaded files in development
 /storage/*
