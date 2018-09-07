@@ -15,6 +15,13 @@
     <hr class="star-dark mb-5">
     
     <%= render partial: 'events/list', locals: { events: @latest_events } %>
+
+    <div class="text-center mt-5">
+      <%= link_to events_path, class: "btn btn-xl btn-secondary" do %>
+        More events
+        <i class="fa fa-arrow-circle-right ml-2"></i>
+      <% end %>
+    </div>
   </div>
 </section>
 
