@@ -22,6 +22,9 @@ gem "mini_magick", "~> 4.8"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
+gem "will_paginate", "~> 3.1.0"
+gem "will_paginate-bootstrap4"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]

@@ -7,6 +7,8 @@ class Event < ApplicationRecord
 
   validates :meetup_id, :meetup_link, :name, :start_time, :end_time, presence: true
 
+  scope :latest, -> { order(start_time: :desc) }
+
   class << self
     def refresh_from_meetup!
       # Using Kernel.open is a security risk for user-provided input (since it

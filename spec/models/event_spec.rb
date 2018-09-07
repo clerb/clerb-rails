@@ -9,8 +9,8 @@ describe Event do
 
   describe "#refresh_from_meetup!" do
     before do
-      events = JSON.parse(File.read(Rails.root.join("spec", "fixtures", "events.json")))
-      stub_request(:get, MEETUP_EVENTS_URL).to_return(status: 200, body: events.to_json)
+      events_json = File.read(Rails.root.join("spec", "fixtures", "events.json"))
+      stub_request(:get, MEETUP_EVENTS_URL).to_return(status: 200, body: events_json)
     end
 
     subject(:refresh_from_meetup!) { described_class.refresh_from_meetup! }
