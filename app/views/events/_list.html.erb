@@ -3,11 +3,9 @@
     <div class="col-lg-10 ml-auto mr-auto event-row">
       <div class="row details-row">
         <div class="col-lg-3 d-flex flex-column justify-content-center">
-          <% unless event.start_time.past? %>
-            <%= link_to event.meetup_link, target: "_blank", class: "btn btn-primary" do %>
-              <i class="fa fa-reply mr-2"></i>
-              RSVP on Meetup
-            <% end %>
+          <%= link_to event.meetup_link, target: "_blank", class: "btn btn-primary" do %>
+            <%= event.start_time.past? ? "View" : "RSVP" %> on Meetup
+            <i class="fa fa-arrow-circle-right ml-2"></i>
           <% end %>
 
           <p class="lead">
