@@ -21,10 +21,12 @@
             <%= link_to event.name, event_path(event), class: "event-title" %>
           </p>
 
-          <p class="address">
-            <i class="fa fa-map-pin mr-2"></i>
-            <%= link_to venue_address(event), google_maps_link(venue_address(event)), target: "_blank", class: "maps-link" %>
-          </p>
+          <% if event.venue %>
+            <p class="address">
+              <i class="fa fa-map-pin mr-2"></i>
+              <%= link_to venue_address(event), google_maps_link(venue_address(event)), target: "_blank", class: "maps-link" %>
+            </p>
+          <% end %>
 
           <p class="lead">
             <%= truncate(strip_tags(event.description), length: 300) %>

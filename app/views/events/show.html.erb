@@ -5,21 +5,23 @@
     <hr class="star-dark mb-5">
 
     <div class="row">
-      <div class="col-lg-5 d-flex flex-column">
-        <p class="address">
-          <i class="fa fa-map-pin mr-2"></i>
-          <%= venue_address(@event) %>
-        </p>
+      <% if @event.venue %>
+        <div class="col-lg-5 d-flex flex-column">
+          <p class="address">
+            <i class="fa fa-map-pin mr-2"></i>
+            <%= venue_address(@event) %>
+          </p>
 
-        <iframe
-          class="map-frame"
-          frameborder="0"
-          src="<%= google_maps_embed_link(venue_address(@event)) %>"
-          allowfullscreen>
-        </iframe>
-      </div>
+          <iframe
+            class="map-frame"
+            frameborder="0"
+            src="<%= google_maps_embed_link(venue_address(@event)) %>"
+            allowfullscreen>
+          </iframe>
+        </div>
+      <% end %>
 
-      <div class="col-lg-7">
+      <div class="col-lg-<%= @event.venue ? '7' : '12' %>">
         <p class="lead">
           <span class="pull-right">
             <strong><%= @event.num_attendees %></strong>
