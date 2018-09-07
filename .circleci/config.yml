@@ -5,12 +5,12 @@ jobs:
       - image: circleci/ruby:2.4.4-node-browsers
         environment:
           PGHOST: 127.0.0.1
-          PGUSER: clerb-test
+          PGUSER: clerb-rails_test
           RAILS_ENV: test
       - image: circleci/postgres:9.4
         environment:
           POSTGRES_USER: clerb
-          POSTGRES_DB: clerb-test
+          POSTGRES_DB: clerb-rails_test
           POSTGRES_PASSWORD: ""
 
     working_directory: ~/clerb-rails
@@ -24,8 +24,14 @@ jobs:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
           # Fall back to using the latest cache if no exact match is found.
           - v1-dependencies-
+
+      - restore_cache:
+          keys:
           - v1-yarn-cache-{{ checksum "yarn.lock" }}
           - v1-yarn-cache-
+
+      - restore_cache:
+          keys:
           - v1-npm-dependencies-{{ checksum "yarn.lock" }}
           - v1-npm-dependencies-
 
