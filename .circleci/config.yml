@@ -82,4 +82,5 @@ jobs:
           path: /tmp/test-results
           destination: test-results
       - store_artifacts:
-          path: /coverage
+          path: ./coverage
+          destination: coverage

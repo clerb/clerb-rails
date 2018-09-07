@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/clerb/clerb-rails.svg?style=shield)](https://circleci.com/gh/clerb/clerb-rails)
+
 # clerb-rails
 
 clerb-rails is the [website](https://www.clevelandrb.com) for the Cleveland Ruby Brigade, built with Ruby on Rails.
