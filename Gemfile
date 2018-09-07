@@ -27,10 +27,15 @@ group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
 
   gem "capybara"
+  gem "factory_bot"
+  gem "factory_bot_rails"
+  gem "faker"
   gem "rspec-rails", "~> 3.8"
   gem "rspec_junit_formatter"
   gem "rubocop"
+  gem "shoulda-matchers", "~> 3.1"
   gem "simplecov", require: false
+  gem "webmock"
 end
 
 group :development do
