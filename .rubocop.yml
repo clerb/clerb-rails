@@ -2,6 +2,8 @@ AllCops:
   Exclude:
     - node_modules/**/*
     - db/**/*
+    - tmp/**/*
+    - vendor/**/*
 
 Metrics/LineLength:
   Enabled: false
