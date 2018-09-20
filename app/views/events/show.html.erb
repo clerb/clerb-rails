@@ -35,7 +35,7 @@
           <%= raw @event.description %>
         </p>
 
-        <%= link_to @event.meetup_link, target: "_blank", class: "btn btn-primary" do %>
+        <%= link_to @event.meetup_link, target: "_blank", class: "btn btn-primary", id: "btn-meetup" do %>
           <%= @event.start_time.past? ? "View" : "RSVP" %> on Meetup
           <i class="fa fa-arrow-circle-right ml-2"></i>
         <% end %>

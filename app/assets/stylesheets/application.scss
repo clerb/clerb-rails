@@ -6,6 +6,10 @@ $fa-font-path: "~font-awesome/fonts";
 
 @import './github-fork-ribbon';
 
+#btn-meetup:focus {
+  color: #fff;
+}
+
 .home-description-link {
   color: white;
   text-decoration: underline;
@@ -82,5 +86,5 @@ $fa-font-path: "~font-awesome/fonts";
         margin-top: 15px;
       }
     }
-  }  
+  }
 }
