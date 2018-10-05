@@ -11,8 +11,12 @@ clerb-rails is the [website](https://www.clevelandrb.com) for the Cleveland Ruby
 1. Clone the repository (`git clone https://github.com/clerb/clerb-rails.git`)
 2. Install gems: `bundle install`
 3. Install npm packages: `yarn install`
-4. Start the Rails server: `bundle exec rails s`
-5. Visit [http://localhost:3000](http://localhost:3000) in your browser
+4. Install PostgreSQL
+5. Setup a new role with SuperUser permissions for PostgreSQL
+6. Create the database and run any pending migrations: `bundle exec rake db:create db:migrate`
+7. Pull down and seed the database with events from the meetup API: `bundle exec rake refresh_meetup_events`
+8. Start the Rails server: `bundle exec rails s`
+9. Visit [http://localhost:3000](http://localhost:3000) in your browser
 
 ### Google Maps setup
 
