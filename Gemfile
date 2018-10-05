@@ -38,6 +38,7 @@ group :development, :test do
   gem "rubocop"
   gem "shoulda-matchers", "~> 3.1"
   gem "simplecov", require: false
+  gem "timecop"
   gem "webmock"
 end
 
