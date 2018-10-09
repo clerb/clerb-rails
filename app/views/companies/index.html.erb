@@ -1,0 +1,26 @@
+<!-- Companies Section -->
+<section id="companies">
+  <div class="container">
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Companies In Cleveland Which Use Ruby</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <% @companies.each do |company| %>
+
+          <div class="col-md-6 col-lg-4">
+            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="<%= asset_pack_path(company[:image]) %>" alt="<%= company[:name] %>">
+            </a>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>

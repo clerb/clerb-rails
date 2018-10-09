@@ -1,4 +1,6 @@
 import 'javascripts/application';
 import 'stylesheets/application';
 
-import 'images/ruby-logo';
+// auto import new images
+const requireAll = r => r.keys().forEach(r);
+requireAll(require.context('images', true));
