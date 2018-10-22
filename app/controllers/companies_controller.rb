@@ -40,6 +40,11 @@ class CompaniesController < ApplicationController
         name: "VHT",
         image: "images/vht.png",
         url: "https://www.vhtcx.com"
+      },
+      {
+        name: "Assurant Labs",
+        image: "images/assurant.png",
+        url: "https://www.assurantlabs.com"
       }
     ].shuffle
   end
