@@ -32,6 +32,16 @@ The event details page contains an embedded Google Map of the event location. Go
 GOOGLE_MAPS_API_KEY=<your_copied_key>
 ```
 
+### GitHub integration setup
+
+1. Visit GitHub and create a new access token [here](https://github.com/settings/tokens)
+2. Add two variables to your `.env` file
+```
+GITHUB_REPO=clerb/clerb-rails
+GITHUB_ACCESS_TOKEN=some-access-token-that-you-created-in-step-1
+```
+**NOTE:** For testing purposes, you may want to create a temporary GitHub Repo for `GITHUB_REPO`.
+
 ## Contributing
 
 1. Fork it (https://github.com/clerb/clerb-rails.com/fork)
