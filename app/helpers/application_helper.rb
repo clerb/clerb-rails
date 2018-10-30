@@ -23,4 +23,12 @@ module ApplicationHelper
   def venue_address(event)
     "#{event.venue.name}, #{event.venue.address}, #{event.venue.city}, #{event.venue.state}"
   end
+
+  def flash_class(level)
+    case level.to_sym
+    when :notice then "alert alert-info"
+    when :success then "alert alert-success"
+    when :error, :alert then "alert alert-danger"
+    end
+  end
 end

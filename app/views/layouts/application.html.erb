@@ -15,7 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   </head>
 
-  <body id="page-top">
+    <body id="page-top"
+      <% if content_for?(:body_attributes) %>
+        <%= yield(:body_attributes) %>
+      <% end %>>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
@@ -41,6 +44,14 @@
 
       <a class="github-fork-ribbon" href="https://github.com/clerb/clerb-rails" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
     </nav>
+
+    <% if flash.any? %>
+      <div class="container flash">
+          <% flash.each do |key, value| %>
+            <%= content_tag :div, value.html_safe, class: flash_class(key), role: "alert" %>
+          <% end %>
+      </div>
+    <% end %>
 
     <%= yield %>
 

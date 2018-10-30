@@ -94,3 +94,13 @@ $fa-font-path: "~font-awesome/fonts";
   justify-content: center;
   align-items: center;
 }
+
+.container.flash {
+  position: relative;
+  top: 150px;
+}
+
+.field_with_errors input {
+  border: 1px solid red;
+  background-color: #FFF0EF;
+}
