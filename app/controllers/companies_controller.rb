@@ -76,12 +76,12 @@ class CompaniesController < ApplicationController
 
   private
 
-  def create_github_issue(company)
-    conn = Faraday.new(:url => "https://api.github.com/repos/#{ENV['GITHUB_REPO']}/issues?access_token=#{ENV['GITHUB_ACCESS_TOKEN']}")
+  def create_github_issue(_company)
+    conn = Faraday.new(url: "https://api.github.com/repos/#{ENV['GITHUB_REPO']}/issues?access_token=#{ENV['GITHUB_ACCESS_TOKEN']}")
     response = conn.post do |req|
-      req.headers['Content-Type'] = 'application/json'
-      req.body =     {
-        access_token: ENV['GITHUB_ACCESS_TOKEN'],
+      req.headers["Content-Type"] = "application/json"
+      req.body = {
+        access_token: ENV["GITHUB_ACCESS_TOKEN"],
         title: "New Company Request - #{company_params[:company_name]}",
         body: """
           Company Name: #{@company.company_name};

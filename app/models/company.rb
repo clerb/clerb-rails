@@ -6,6 +6,6 @@ class Company
   validates :company_name, :website, :image_url, presence: true
 
   def self.model_name
-    ActiveModel::Name.new(self, nil, 'Company')
+    ActiveModel::Name.new(self, nil, "Company")
   end
 end
