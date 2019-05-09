@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@fortawesome/fontawesome-free@5.8.1":
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.1.tgz#cbafbfe8894c4e3e3c3a9da6774e249ac1f2da8b"
+  integrity sha512-GJtx6e55qLEOy2gPOsok2lohjpdWNGrYGtQx0FFT/++K4SYx+Z8LlPHdQBaFzKEwH5IbBB4fNgb//uyZjgYXoA==
+
 "@rails/webpacker@3.5":
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-3.5.5.tgz#8911c66bcefc8bc6b91270e92f0d39e3c2d43116"
@@ -897,12 +902,7 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
   integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
 
-bootstrap@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
-  integrity sha512-SpiDSOcbg4J/PjVSt4ny5eY6j74VbVSjROY4Fb/WIUXBV9cnb5luyR4KnPvNoXuGnBK1T+nJIWqRsvU3yP8Mcg==
-
-bootstrap@^4.3.1:
+bootstrap@4.3.1, bootstrap@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
   integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
@@ -2106,7 +2106,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
-font-awesome@4.7.0, font-awesome@^4.7.0:
+font-awesome@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
   integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
@@ -5117,13 +5117,13 @@ ssri@^5.2.4:
   dependencies:
     safe-buffer "^5.1.1"
 
-startbootstrap-freelancer@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/startbootstrap-freelancer/-/startbootstrap-freelancer-4.1.1.tgz#7ffb202c271ffa68af978286daac9bed4cdad65f"
-  integrity sha512-EPlEcMjBS/FWog4trYZhL0ad+36SzNuOOWnsr50SdaNirroT1xa/dL+xq9l9m3ZIKnZ4mK8XdMCKvDU7EwCcng==
+startbootstrap-freelancer@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/startbootstrap-freelancer/-/startbootstrap-freelancer-5.0.4.tgz#3727a7eb72e856d5e0d04e0e4357d038e5bbdce6"
+  integrity sha512-WFGZBrMSUVaGJd522zidvKpR5ciZrmBI9GQmOW9KHm5ijxNbI1vUadFGHhaDk6wbbJl1bS7rFAwzOqn+sZ8qUg==
   dependencies:
-    bootstrap "4.1.1"
-    font-awesome "4.7.0"
+    "@fortawesome/fontawesome-free" "5.8.1"
+    bootstrap "4.3.1"
     jquery "3.3.1"
     jquery.easing "^1.4.1"
     magnific-popup "^1.1.0"
