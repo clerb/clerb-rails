@@ -38,7 +38,7 @@ group :development, :test do
   gem "rspec-rails", "~> 3.8"
   gem "rspec_junit_formatter"
   gem "rubocop"
-  gem "shoulda-matchers", "~> 3.1"
+  gem "shoulda-matchers", "~> 4.0"
   gem "simplecov", require: false
   gem "timecop"
   gem "webmock"
