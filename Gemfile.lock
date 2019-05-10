@@ -86,7 +86,7 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
-    jbuilder (2.7.0)
+    jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     json (2.1.0)
@@ -242,7 +242,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   faraday
-  jbuilder (~> 2.5)
+  jbuilder (~> 2.8)
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.9)
   pg (>= 0.18, < 2.0)
