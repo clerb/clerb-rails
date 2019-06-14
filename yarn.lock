@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@fortawesome/fontawesome-free@5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.9.0.tgz#1aa5c59efb1b8c6eb6277d1e3e8c8f31998b8c8e"
+  integrity sha512-g795BBEzM/Hq2SYNPm/NQTIp3IWd4eXSH0ds87Na2jnrAUFX3wkyZAI4Gwj9DOaWMuz2/01i8oWI7P7T/XLkhg==
+
 "@rails/webpacker@3.5":
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-3.5.5.tgz#8911c66bcefc8bc6b91270e92f0d39e3c2d43116"
@@ -897,12 +902,7 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
   integrity sha512-ItfYfPLkWHUjckQCk8xC+LwxgK8NYcXywGigJgSwOP8Y2iyWT4f2vsZnoOXTTbo+o5yXmIUJ4gn5538SO5S3gA==
 
-bootstrap@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.1.1.tgz#3aec85000fa619085da8d2e4983dfd67cf2114cb"
-  integrity sha512-SpiDSOcbg4J/PjVSt4ny5eY6j74VbVSjROY4Fb/WIUXBV9cnb5luyR4KnPvNoXuGnBK1T+nJIWqRsvU3yP8Mcg==
-
-bootstrap@^4.3.1:
+bootstrap@4.3.1, bootstrap@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
   integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
@@ -2106,7 +2106,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
-font-awesome@4.7.0, font-awesome@^4.7.0:
+font-awesome@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
   integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
@@ -2795,12 +2795,7 @@ jquery.easing@^1.4.1:
   resolved "https://registry.yarnpkg.com/jquery.easing/-/jquery.easing-1.4.1.tgz#47982c5836bd758fd48494923c4a101ef6e93e3b"
   integrity sha1-R5gsWDa9dY/UhJSSPEoQHvbpPjs=
 
-jquery@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
-  integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
-
-jquery@^3.4.1:
+jquery@3.4.1, jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -5141,14 +5136,14 @@ ssri@^5.2.4:
   dependencies:
     safe-buffer "^5.1.1"
 
-startbootstrap-freelancer@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/startbootstrap-freelancer/-/startbootstrap-freelancer-4.1.1.tgz#7ffb202c271ffa68af978286daac9bed4cdad65f"
-  integrity sha512-EPlEcMjBS/FWog4trYZhL0ad+36SzNuOOWnsr50SdaNirroT1xa/dL+xq9l9m3ZIKnZ4mK8XdMCKvDU7EwCcng==
+startbootstrap-freelancer@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/startbootstrap-freelancer/-/startbootstrap-freelancer-5.1.2.tgz#1333dee358dd7903276e992d18c61081eda11eac"
+  integrity sha512-QGN0cGTy4b9birV8bo064xKm+gwTOU3WxH1/9EQaWew/NDJtAhf2s9sjIMw+2dvbFIWp6hRVffRzaQE8ArQaFA==
   dependencies:
-    bootstrap "4.1.1"
-    font-awesome "4.7.0"
-    jquery "3.3.1"
+    "@fortawesome/fontawesome-free" "5.9.0"
+    bootstrap "4.3.1"
+    jquery "3.4.1"
     jquery.easing "^1.4.1"
     magnific-popup "^1.1.0"
 
