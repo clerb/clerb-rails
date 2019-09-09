@@ -117,7 +117,8 @@ GEM
       ast (~> 2.4.0)
     pg (1.1.4)
     public_suffix (3.1.0)
-    puma (3.12.1)
+    puma (4.1.1)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-proxy (0.6.4)
       rack
@@ -246,7 +247,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.9)
   pg (>= 0.18, < 2.0)
-  puma (~> 3.12)
+  puma (~> 4.1)
   rails (~> 5.2.1)
   rspec-rails (~> 3.8)
   rspec_junit_formatter
