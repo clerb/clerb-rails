@@ -12,7 +12,7 @@
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "rails-ujs": "^5.2.3",
-    "startbootstrap-freelancer": "^4.1.1",
+    "startbootstrap-freelancer": "^6.0.4",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {}
