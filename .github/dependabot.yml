@@ -1,0 +1,41 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rubocop
+    versions:
+    - 1.10.0
+    - 1.11.0
+    - 1.12.0
+    - 1.9.0
+    - 1.9.1
+  - dependency-name: loofah
+    versions:
+    - 2.9.0
+  - dependency-name: webpacker
+    versions:
+    - 5.2.1
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: startbootstrap-freelancer
+    versions:
+    - 6.0.5
+  - dependency-name: "@rails/webpacker"
+    versions:
+    - 5.2.1
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: rails-ujs
+    versions:
+    - 5.2.4
